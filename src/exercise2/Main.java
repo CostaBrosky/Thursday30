@@ -8,9 +8,9 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Runnable r1 = new List1(random(1, 999));
-		Runnable r2 = new List2(random(1000, 1999));
-		Runnable r3 = new List3(random(2000, 3000));
+		Runnable r1 = new List1(random(999));
+		Runnable r2 = new List2(random(1000));
+		Runnable r3 = new List3(random(1000));
 		
 		
 		Thread l1 = new Thread(r1);
@@ -46,11 +46,11 @@ public class Main {
 //		
 	}
 	
-	public static List<Integer> random(int j, int k) {
+	public static List<Integer> random(int j) {
 		List<Integer> al = new ArrayList<>();
 		Random rand = new Random();
 
-		for (int i = j; i < k; i++) {
+		for (int i = 0; i < j; i++) {
 			int pick = rand.nextInt(350);
 			al.add(pick);
 			
